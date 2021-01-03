@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Bienestar</title>
+    </head>
+    <body >
+
+      <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="js/createCalendar.js"></script>
+      <script type="text/javascript" src="js/timeline.js"></script>
+    </body>
+
+    
+    
+    <body class="padding  has-header has-footer" id="filler">
+      <div class="popover" id="popover1">
+        <div class="list">
+          <div class="item"><h1 class="text-black">Login</h1></div>
+          <div class="item"><h1 class="text-black">Regístrate</h1></div>
+          <div class="item"><h1 class="text-black">Membresía Premium</h1></div>
+          <div class="item"><h1 class="text-black">Acerca de</h1></div>
+        </div>
+      </div>
+      <div class="header " id="navbars">
+        <div class="left">
+          <button class="icon ion-navicon"onclick="openPopover('popover1')"></button>
+        </div>
+        <h1>Bienestar</h1>
+      </div>
+      <div class="footer shadow tab" id="navbars">
+        <button class="icon ion-ios-home-outline" onclick="openTab('myTabHome');clearSelection();">Home</button>
+        <button class="icon ion-android-list" onclick="openTab('myTabAutoe'); clearSelection();">Autoevaluación</button>
+        <button class="icon ion-android-calendar" onclick="openTab('myTabActividades');clearSelection();">Actividades</button>
+      </div>
+      <div class="tab-content active" id="myTabHome">
+        <p>
+          <br>
+        </p>
+        <body class="has-header grey-100">
+          <!--Aquí empieza calendar view-->
+          <div class="calendar" id="calendar_view">
+            <div class="calendar-btn month-btn" onclick="$('#months_view').toggle('fast')">
+                <span id="curMonth_view"></span>
+                <div id="months_view" class="months dropdown"></div>
+            </div>
+        
+            <div class="calendar-btn year-btn" onclick="$('#years_view').toggle('fast')">
+                <span id="curYear_view"></span>
+                <div id="years_view" class="years dropdown"></div>
+            </div>
+        
+            <div class="clear"></div>
+        
+            <div class="calendar-dates">
+                <div class="days">
+                    <div class="day label">SUN</div>
+                    <div class="day label">MON</div>
+                    <div class="day label">TUE</div>
+                    <div class="day label">WED</div>
+                    <div class="day label">THUR</div>
+                    <div class="day label">FRI</div>
+                    <div class="day label">SAT</div>
+        
+                    <div class="clear"></div>
+                </div>
+        
+                <div id="calendarDays_view" class="days">
+                </div>
+            </div>
+          </div>
+          <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+          <script type="text/javascript" src="js/calendarView.js" async defer></script>
+          <div id="actividad_view">
+            <p id="salto de linea"><br></p>
+            <p id="actividad_1_view"></p>
+          </div>
+
+
+          <!--Aquí termina calendar view-->
+          <div id = "TimelineHome" class="timeline grey-100 content">
+            <div class="row content">
+              <div class="col-10 align-center marker">
+                <div class="col icon-circle-small text-white cyan-700">
+                  <i class="icon ion-home"></i>
+                </div>
+              </div>
+              <div class="col shadow radius margin white" >
+                <div class="margin">
+                  <h2><span class="text-bold">01/2020 - Hito</span> </h2>
+                  <h2> Empezaste el viaje hacia el bienestar! </h2>
+                  <p class="text-grey">Felicidades!</p>
+                </div>
+              </div>
+            </div>
+          </div> <!--Aqui termina el codigo de timeline de home-->
+        </body>
+      </div>
+      <div class="tab-content " id="myTabAutoe">
+        <p>
+          <br>
+          <br>
+          <br>
+        </p>
+        <div class="header sub shadow tab" id="headercuest">
+          <button class="margin opacity-40 border-black text-black radius icon ion-clipboard" onclick="openTab('tabCuestionario')">Nuevo test</button>
+          <button class="margin opacity-40 border-black text-black radius icon ion-ios-loop" onclick="openTab('tabResultados'); showResults()">Revisar último</button>
+        </div>
+        <div class="tab-content " id="tabCuestionario">
+          <div class="list content" id="cuestionario">
+            <div class="item small-space grey-300 text-grey-700">
+              <p>
+                Mueve la barra en cada categoría para indicar que tan de acuerdo estás con la afirmación, siendo:
+              </p>
+              <p>
+                0 = Totalmente en desacuerdo
+              </p>
+              <p>
+                10 = Totalmente de acuerdo
+              </p>
+            </div>
+            <script type="text/javascript" src="js/slidebar.js" async defer></script>
+            <div class="align-center">
+              <p>
+                <b>Salud física</b>
+              </p>
+              <p>
+                Regularmente me preocupo de mi salud física. Primo mi estado físico para estar bien en el día a día. Mis comidas están balanceadas y duermo lo suficiente todos los días.
+              </p>
+            </div>
+            
+            <div class ="inputDiv i1"></div>
+            <div class="align-center">
+              <p>
+                <b>Salud mental</b>
+              </p>
+              <p>
+                Mantengo una actitud positiva. Cultivo una sensación de alegría para poder experimentar emociones positivas frente a mis amistades.
+              </p>
+            </div>
+            <div class ="inputDiv i2"></div>
+            <div class="align-center">
+              <p>
+                <b>Amor/Pareja</b>
+              </p>
+              <p>
+                Siento una conexión real, duradera, confidente y amorosa con mi compañero/a. Soy paciente, respetuoso y atento con sus necesidades.
+              </p>
+            </div>
+            <div class ="inputDiv i3"></div>
+            <div class="align-center">
+              <p>
+                <b>Familia</b>
+              </p>
+              <p>
+                Estoy presente en mi familia. Mantengo contacto con ellos y comparto energías positivas y conexiones profundas. Amo a mi familia e intento hacer lo mejor para ellos.
+              </p>
+            </div>
+            <div class ="inputDiv i4"></div>
+            <div class="align-center">
+              <p>
+                <b>Amigos</b>
+              </p>
+              <p>
+                Mi círculo cercano de amigos trae felicidad a mi vida. Intente que todas estas relaciones sean auténticas. Paso tiempo suficiente con mis amigos.
+              </p>
+            </div>
+            <div class ="inputDiv i5"></div>
+            <div class="align-center">
+              <p>
+                <b>Propósito</b>
+              </p>
+              <p>
+                Siento que mi trabajo y mi contribución al mundo me llenan de energía positiva y emoción. Mi aporte a lo que hago agrega valor sustancial.
+              </p>
+            </div>
+            <div class ="inputDiv i6"></div>
+            <div class="align-center">
+              <p>
+                <b>Experiencias</b>
+              </p>
+              <p>
+                Planifico viajes o salidas con amigos para desconectarme del día a día y generar experiencias positivas que traigan alegría a mi vida. Le dedico el tiempo suficiente a hobbies, paseos u otros.
+              </p>
+            </div>
+            <div class ="inputDiv i7"></div>
+            <div class="align-center">
+              <p>
+                <b>Espíritu</b>
+              </p>
+              <p>
+                Me siento conectado al presente y vivo espiritualmente. Soy congruente con mis creencias y las aplico a mis decisiones diarias.
+              </p>
+            </div>
+            <div class ="inputDiv i8"></div>
+            <div class="align-center">
+              <p>
+                <b>Finanzas</b>
+              </p>
+              <p>
+                Estoy siendo responsable en cómo gasto mi dinero. Ahorro para mi futuro. Estoy constantemente aprendiendo nuevas formas de generar dinero y estoy contento con la forma de vida que tengo respecto a mis gastos.
+              </p>
+            </div>
+            <div class ="inputDiv i9"></div>
+            <div class="align-center">
+              <p>
+                <b>Aprendizaje</b>
+              </p>
+              <p>
+                Soy curioso y estoy constantemente atento a lo que me rodea, por lo que aprendo cosas nuevas. Busco descubrir cosas nuevas, tanto de mí como del mundo.
+              </p>
+            </div>
+            <div class ="inputDiv i10"></div>
+            <div class = "inputDiv i11">
+              <button class="green full" type="submit" value="Submit" onclick="alert('Resultado guardado satisfactoriamente'); cleanActivitiesList(); saveResults(); addActivities(); AddTimelineTest()">Enviar respuestas</button>
+            </div>
+
+          </div>
+          
+        </div>
+
+        <div class="tab-content" id="tabResultados">
+          <br>
+          Los resultados obtenidos en el último cuestionario son:
+          <br>
+          <div class=list>
+            <b>Salud física</b>: <div id="results1"></div>
+            <b>Salud mental</b>: <div id="results2"></div>
+            <b>Amor/Pareja</b>: <div id="results3"></div>
+            <b>Familia</b>: <div id="results4"></div>
+            <b>Amigos</b>: <div id="results5"></div>
+            <b>Propósito</b>: <div id="results6"></div>
+            <b>Experiencias</b>: <div id="results7"></div>
+            <b>Espíritu</b>: <div id="results8"></div>
+            <b>Finanzas</b>: <div id="results9"></div>
+            <b>Aprendizaje</b>: <div id="results10"></div>
+          </div>
+        </div>
+      </div>
+
+<!--Aqui termina autoeval-->
+
+      <div class="tab-content" id="myTabActividades">
+        <h2 class="text-strong padding text-black"><br></h2>
+        <div class="header  sub shadow tab" id="subnav">
+          <button class="icon ion-clipboard" onclick="openTab('tabModificar');clearSelection();">Modificar</button>
+          <button class="icon ion-android-calendar" onclick="openTab('tabAgendar');clearSelection();">Agendar</button>
+        </div>
+        <div class="tab-content active" id="tabModificar">
+          <h2 class="text-strong padding text-black"><br></h2>
+          <!-- Aquí comienza modificar  -->
+          <div class="calendar" id="calendar_mod">
+            <div class="calendar-btn month-btn" onclick="$('#months_mod').toggle('fast')">
+                <span id="curMonth_mod"></span>
+                <div id="months_mod" class="months dropdown"></div>
+            </div>
+        
+            <div class="calendar-btn year-btn" onclick="$('#years_mod').toggle('fast')">
+                <span id="curYear_mod"></span>
+                <div id="years_mod" class="years dropdown"></div>
+            </div>
+        
+            <div class="clear"></div>
+        
+            <div class="calendar-dates">
+                <div class="days">
+                    <div class="day label">SUN</div>
+                    <div class="day label">MON</div>
+                    <div class="day label">TUE</div>
+                    <div class="day label">WED</div>
+                    <div class="day label">THUR</div>
+                    <div class="day label">FRI</div>
+                    <div class="day label">SAT</div>
+        
+                    <div class="clear"></div>
+                </div>
+        
+                <div id="calendarDays_mod" class="days">
+                </div>
+            </div>
+          </div>
+          <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+          <script type="text/javascript" src="js/calendarModify.js" async defer></script>
+          <div id="actividad_mod">
+            <p id="salto de linea"><br></p>
+            <p id="actividad_1_mod"></p>
+          </div>
+          <div id="instruccion_mod">
+            <h3 id="instruccion_1_mod">Seleccione un día a modificar</h3>
+          </div>
+          <div class="align-center" id="options_mod">
+            
+          </div>
+          <div class="align-center" id="boton_confirmar_mod">
+
+          </div>
+          <!-- Fin modificar -->
+        </div>
+        <div class="tab-content active" id="tabAgendar">
+          <h2 class="text-strong padding text-black"><br></h2>
+          <div class="calendar" id="calendar">
+            <div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+                <span id="curMonth"></span>
+                <div id="months" class="months dropdown"></div>
+            </div>
+        
+            <div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+                <span id="curYear"></span>
+                <div id="years" class="years dropdown"></div>
+            </div>
+        
+            <div class="clear"></div>
+        
+            <div class="calendar-dates">
+                <div class="days">
+                    <div class="day label">SUN</div>
+                    <div class="day label">MON</div>
+                    <div class="day label">TUE</div>
+                    <div class="day label">WED</div>
+                    <div class="day label">THUR</div>
+                    <div class="day label">FRI</div>
+                    <div class="day label">SAT</div>
+        
+                    <div class="clear"></div>
+                </div>
+        
+                <div id="calendarDays" class="days">
+                </div>
+            </div>
+          </div>
+          <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+          <script type="text/javascript" src="js/agendar.js" async defer></script>
+          <div id="actividad">
+            <p id="salto de linea"><br></p>
+            <p id="actividad_1"></p>
+          </div>
+          <div id="instruccion">
+            <h3 id="instruccion_1">Seleccione un día disponible</h3>
+          </div>
+          <div class="item align-center padding margin" id="dropdown_actividades">
+            
+          </div>
+          <div  class="align-center padding margin" id="boton_confirmar">
+
+          </div>
+        </div>
+
+      </div> 
+    </body>
+</html>

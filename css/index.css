@@ -1,0 +1,554 @@
+* {
+    margin:0 ;
+	padding:0;
+    border:0;
+    /*google pixel 2 xl*/
+    max-height: 823px;
+    max-width: 411px;
+
+   
+}
+
+
+#TimelineHome{
+    height:auto;
+    top:490px;
+    bottom: 52px;
+    position: absolute;
+}
+
+#cuestionario{
+    height:auto;
+    top:104px;
+    bottom: 52px;
+    position: absolute;
+}
+
+#filler{
+    background-color: #a2dcfd2b;
+    color: white;
+    
+}
+#navbars{
+    background-color: #65BEF0;
+}
+#myTabActividades{
+    color: black;
+}
+
+#myTabAutoe{
+    color: black;
+}
+
+#myTabHome{
+    color: black;
+}
+
+#subnav{
+    background-color: #AFD7ED;
+}
+#instruccion_1{
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+#instruccion_1_mod{
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+#descripcion_mod{
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin: 10px;
+}
+
+
+.fisico{
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px #00000059;
+    /*text-shadow: 2px 2px 2px black;*/
+}
+
+.amigos{
+    background-color: #141e7c;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px#00000059;
+}
+
+.mental{
+    background-color: #094b4b;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.amor-pareja{
+    background-color: rgb(145, 11, 51);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.familia{
+    background-color: rgb(7, 100, 43);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.proposito{
+    background-color: #535c07;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.experiencias{
+    background-color: rgb(117, 84, 11);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.espiritu{
+    background-color: rgb(86, 6, 117);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.finanzas{
+    background-color: rgb(33, 80, 7);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+
+.aprendizaje{
+    background-color: rgb(124, 20, 34);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2%;
+    border: solid 5px rgba(13, 20, 82, 0.836);
+}
+/* Slidebars */
+
+.inputDiv {
+    width: 300px;
+    display:block;
+    margin: 50px auto;
+    color:black;
+    position:relative;
+  }
+  .output{display:inline-block; width:40px; text-align:center;}
+
+input[type='range'] {
+    display: inline-block;
+    width: 250px;
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #777;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    margin-top: -9px;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    background-color: #777;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #333;
+    border-radius: 50%;
+  }
+  
+  input[type=range]::-ms-thumb {
+    background-color: #777;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-radius: 50%;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    background-color: #777;
+    height: 3px;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  
+  input[type=range]::-moz-range-track {
+    background-color: #777;
+    height: 3px;
+  }
+  
+  input[type=range]::-ms-track {
+    background-color: #777;
+    height: 3px;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background-color: HotPink
+  }
+  
+  input[type=range]::-ms-fill-upper {
+    background-color: black;
+  } 
+
+/*calendar*/
+.calendar
+{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.calendar .dropdown
+{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #1caff6;
+    text-align: center;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 160px;
+    left: 0px;
+    z-index: 2000;
+}
+
+.calendar .dropdown .dropdown-item
+{
+    cursor:pointer;
+    opacity: .7;
+    transition: .5s opacity;
+}
+
+.calendar .dropdown .dropdown-item:hover
+{
+    opacity: 1;
+}
+
+.calendar .years
+{
+    display:none;
+}
+
+.calendar .title
+{
+    text-align:center;
+    font-size:20pt;
+}
+
+.calendar .calendar-btn
+{
+    float: left;
+    background-color: #24aeff;
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 20%;
+    cursor: pointer;
+    transition: .5s background-color;
+}
+
+.calendar .calendar-btn:hover{
+    background-color:#1f71a1;
+}
+
+.calendar .year-btn
+{
+    float:right;
+}
+
+.calendar .calendar-dates .days .day
+{
+    float:left;
+    width: 14%;
+    height: 35px;
+    /*margin: 1%;*/
+    padding: 1%;
+    font-size:13pt;
+    text-align:center;
+    /*border-radius: 10px;*/
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+}
+
+.calendar .calendar-dates .days .day.blank
+{
+    background-color: white;
+    border:none;
+}
+
+.calendar .calendar-dates .days .day.selected
+{
+    /*background-color: #1caff6;
+    color: white;*/
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+    border: solid 4px rgb(48, 19, 212);
+}
+
+.calendar .calendar-dates .days .day.busy
+{
+    background-color: #f6901c;
+    color: white;
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+}
+
+.calendar .calendar-dates .days .day.done
+{
+    background-color: #1cb116;
+    color: white;
+    cursor:pointer;
+    opacity: .7;
+    transition: .5s opacity;
+}
+
+.calendar .calendar-dates .days .day.failed
+{
+    background-color: #c01818;
+    color: white;
+    cursor:pointer;
+    opacity: .7;
+    transition: .5s opacity;
+}
+
+.calendar .calendar-dates .days .day.selected:hover
+{
+    opacity: 1;
+}
+
+.calendar .calendar-dates .days .day.label
+{
+    height: 40px;
+    background-color: white;
+    color: black;
+    border:none;
+    font-weight:bold;
+}
+
+.clear{
+    clear:both;
+}
+
+@media only screen and (max-width: 960px) {
+    .calendar{
+        width: 100%;
+        margin: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        position: relative;
+        left: 0px;
+    }
+}
+
+
+/*calendar_view*/
+.calendar_view
+{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.calendar_view .dropdown
+{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #1caff6;
+    text-align: center;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 160px;
+    left: 0px;
+    z-index: 2000;
+}
+
+.calendar_view .dropdown .dropdown-item
+{
+    cursor:pointer;
+    opacity: .7;
+    transition: .5s opacity;
+}
+
+.calendar_view .dropdown .dropdown-item:hover
+{
+    opacity: 1;
+}
+
+.calendar_view .years_view
+{
+    display:none;
+}
+
+.calendar_view .title
+{
+    text-align:center;
+    font-size:20pt;
+}
+
+.calendar_view .calendar-btn
+{
+    float: left;
+    background-color: #24aeff;
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 20%;
+    cursor: pointer;
+    transition: .5s background-color;
+}
+
+.calendar_view .calendar-btn:hover{
+    background-color:#1f71a1;
+}
+
+.calendar_view .year-btn
+{
+    float:right;
+}
+
+.calendar_view .calendar-dates .days_view .day
+{
+    float:left;
+    width: 12%;
+    margin: 1%;
+    padding: 1%;
+    font-size:13pt;
+    text-align:center;
+    border-radius: 10px;
+    border: solid 1px #ddd;
+}
+
+.calendar_view .calendar-dates .days_view .day.blank
+{
+    background-color: white;
+    border:none;
+}
+
+.calendar_view .calendar-dates .days_view .day.selected
+{
+    /*background-color: #1caff6;
+    color: white;*/
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+    border: solid 1px rgb(48, 19, 212);
+}
+
+.calendar_view .calendar-dates .days_view .day.busy
+{
+    background-color: #f6901c;
+    color: white;
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+}
+
+.calendar_view .calendar-dates .days .day.done
+{
+    background-color: #23f61c;
+    color: white;
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+}
+
+.calendar_view .calendar-dates .days .day.failed
+{
+    background-color: #c01818;
+    color: white;
+    cursor:pointer;
+    opacity: .5;
+    transition: .5s opacity;
+}
+
+.calendar_view .calendar-dates .days_view .day.selected:hover
+{
+    opacity: 1;
+}
+
+.calendar_view .calendar-dates .days_view .day.label
+{
+    height: 40px;
+    background-color: white;
+    color: black;
+    border:none;
+    font-weight:bold;
+}
+
+.clear{
+    clear:both;
+}
+
+@media only screen and (max-width: 960px) {
+    .calendar_view{
+        width: 100%;
+        margin: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        position: relative;
+        left: 0px;
+    }
+}
